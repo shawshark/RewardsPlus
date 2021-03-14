@@ -1,0 +1,288 @@
+main-page:
+  
+  fill-gui: true # If the GUI should be filled with an item.
+  fill-item: BLACK_STAINED_GLASS_PANE # Item they will fill the empty slots.
+  
+  animated-menu: false # Enable or disable the animated menu (still in beta)
+  
+  inventory: # Inventory Settings
+    name: '&6Claim your Daily Rewards!' # Name of the inventory
+    size: 36 # Size of the inventory
+
+cooldown-format: '&e{hours} hours, {minutes} minutes, {seconds} seconds' # Cooldown format that will be shown in the lore
+
+rewards:
+  daily-login: # Name of reward, Copy this section and paste at the bottom, editing the name and values you wish to.
+    cooldown: 86400 # Cooldown, Player cant claim reward again until its been this many seconds.
+    type: DAILY_LOGIN  # Type of reward. This value can be DAILY_LOGIN, VOTE or ACTIVE_CLAIMS
+    permission: '' # set a permission if you want to limit who can claim this reward
+    on-claim-messages:
+    - '&6You claimed the &7Daily Login reward!' # messages that will get sent to the player upon claiming this reward
+    - '&a&l+$1000&7, &a&l1x Diamond'
+    on-claim-commands:
+    - 'pay {player} 1000'
+    - 'give {player} diamond 1' # Commands that will be executed from console upon claiming this reward. {player} = Player Name
+    send-title-message: true
+    title:
+      header: '&bClaimed Reward'
+      footer: '&7You claimed &6Daily Login'
+      fade-in: 22
+      stay: 55
+      fade-out: 22
+    gui:
+      display-name: '&a&lDaily Login!'
+      slot: 11
+      material: IRON_INGOT
+      lore-can-claim:
+      - ''
+      - '&7Play every day to'
+      - '&7collect your reward!'
+      - ''
+      - '&aYou are eligible to claim this reward!'
+      - ''
+      - '&b&lRewards'
+      - '&f- $1000'
+      - '&f- 1x Diamond'
+      - ''
+      - '&c&lCooldown'
+      - '&f24 hours'
+      lore-cant-claim:
+      - ''
+      - '&7Play every day to'
+      - '&7collect your reward!'
+      - ''
+      - '&cYou are not eligible to claim this reward!'
+      - ''
+      - '&b&lRewards'
+      - '&f- $1000'
+      - '&f- 1x Diamond'
+      - ''
+      - '&c&lTime till next claim:'
+      - '&f{cooldown-format}'
+  vote1:
+    cooldown: 86400
+    type: vote
+    permission: ''
+    on-claim-messages:
+    - '&6You claimed the &7Vote reward!'
+    - '&a&l+$1000&7, &a&l1x Diamond'
+    on-claim-commands:
+    - 'pay {player} 1000'
+    - 'give {player} diamond 1'
+    send-title-message: true
+    title:
+      header: '&bClaimed Reward'
+      footer: '&7You claimed &6Vote'
+      fade-in: 22
+      stay: 55
+      fade-out: 22
+    gui:
+      display-name: '&bVote!'
+      slot: 13
+      material: DIAMOND
+      lore-can-claim:
+      - ''
+      - '&7Vote on sites to gain access to collect this reward.'
+      - '&7View the &aVoting &7links by typing &6/vote'
+      - ''
+      - ''
+      - '&aYou are eligible to claim this reward!'
+      - ''
+      - '&b&lRewards'
+      - '&f- $1000'
+      - '&f- 1x Diamond'
+      - ''
+      - '&a&lRequirements'
+      - '&f- Vote at least once'
+      - ''
+      - '&c&lCooldown'
+      - '&f24 hours'
+      lore-cant-claim:
+      - ''
+      - '&7Vote on sites to gain access to collect this reward.'
+      - '&7View the &aVoting &7links by typing &6/vote'
+      - ''
+      - ''
+      - '&cYou are not eligible to claim this reward!'
+      - ''
+      - '&b&lRewards'
+      - '&f- $1000'
+      - '&f- 1x Diamond'
+      - ''
+      - '&a&lRequirements'
+      - '&f- Vote at least once'
+      - ''
+      - '&c&lTime till next claim:'
+      - '&f{cooldown-format}'
+      lore-not-voted-yet:
+      - ''
+      - '&7Vote on sites to gain access to collect this reward.'
+      - '&7View the &aVoting &7links by typing &6/vote'
+      - ''
+      - ''
+      - '&cYou are not eligible to claim this reward!'
+      - '&cType &7/vote &cto gain access.'
+      - ''
+      - '&b&lRewards'
+      - '&f- $1000'
+      - '&f- 1x Diamond'
+      - ''
+      - '&a&lRequirements'
+      - '&f- Vote at least once'
+  vip-reward1:
+    cooldown: 43200
+    type: DAILY_LOGIN
+    permission: dailyrewards.claim.vip-reward1
+    on-claim-messages:
+    - '&6You claimed the &7Vote reward!'
+    - '&a&l+$10000&7, &a&l100x Diamonds'
+    on-claim-commands:
+    - 'pay {player} 10000'
+    - 'give {player} diamond 100'
+    send-title-message: true
+    title:
+      header: '&bClaimed Reward'
+      footer: '&7You claimed &6Vote'
+      fade-in: 22
+      stay: 55
+      fade-out: 22
+    gui:
+      display-name: '&cSPECIAL REWARD &a&lVIP!'
+      slot: 15
+      material: EMERALD
+      lore-can-claim:
+      - ''
+      - '&7Speical reward for &aVIP+'
+      - '&7Find some goodies in this package.'
+      - '&7Purchase &aVIP+ &7to gain access!'
+      - ''
+      - '&aYou are eligible to claim this reward!'
+      - ''
+      - '&b&lRewards'
+      - '&f- $10000'
+      - '&f- 100x Diamond'
+      - ''
+      - '&a&lRequirements'
+      - '&f- Have the rank &aVIP+'
+      - ''
+      - '&c&lCooldown'
+      - '&f12 hours'
+      lore-cant-claim:
+      - ''
+      - '&7Speical reward for &aVIP+'
+      - '&7Find some goodies in this package.'
+      - '&7Purchase &aVIP+ &7to gain access!'
+      - ''
+      - '&cYou are not eligible to claim this reward!'
+      - ''
+      - '&b&lRewards'
+      - '&f- $10000'
+      - '&f- 100x Diamond'
+      - ''
+      - '&a&lRequirements'
+      - '&f- Have the rank &aVIP+'
+      - ''
+      - '&c&lTime till next claim:'
+      - '&f{cooldown-format}'
+  active-claims-reward1:
+    cooldown: 43200
+    type: Active_Claims
+    permission: ''
+    need-active-claims: 2
+    on-claim-messages:
+    - '&6You claimed the &7Active Claims Reward!'
+    - '&a&l+$10000&7, &a&l100x Diamonds'
+    on-claim-commands:
+    - 'pay {player} 10000'
+    - 'give {player} diamond 100'
+    send-title-message: true
+    title:
+      header: '&bClaimed Reward'
+      footer: '&7You claimed &6Active Claims Reward'
+      fade-in: 22
+      stay: 55
+      fade-out: 22
+    gui:
+      display-name: '&cACTIVE CLAIMS &6(Need 2)'
+      slot: 19
+      material: ENDER_CHEST
+      lore-can-claim:
+      - ''
+      - '&7Claimed 2 rewards from this inventory?'
+      - '&7If so you might be eligible to claim this reward!'
+      - ''
+      - '&aYou are eligible to claim this reward!'
+      - '  &bClaims  &6{player-active-claims} &7/ &6{total-needed-claims}'
+      - ''
+      - '&b&lRewards'
+      - '&f- $10000'
+      - '&f- 100x Diamond'
+      - ''
+      - '&a&lRequirements'
+      - '&f- 2 Active Rewards claims'
+      - ''
+      - '&c&lCooldown'
+      - '&f12 hours'
+      lore-cant-claim:
+      - ''
+      - '&7Claimed 2 rewards from this inventory?'
+      - '&7If so you might be eligible to claim this reward!'
+      - ''
+      - '&cYou are not eligible to claim this reward!'
+      - '  &bClaims  &6{player-active-claims} &7/ &6{total-needed-claims}'
+      - ''
+      - '&b&lRewards'
+      - '&f- $10000'
+      - '&f- 100x Diamond'
+      - ''
+      - '&a&lRequirements'
+      - '&f- 2 Active Rewards claims'
+      - ''
+      - '&c&lTime till next claim:'
+      - '&f{cooldown-format}'
+  weekly-reward1:
+    cooldown: 604800
+    type: DAILY_LOGIN
+    on-claim-messages:
+    - '&6You claimed the &7Weekly Reward!'
+    - '&a&l+$10000&7, &a&l100x Diamonds'
+    on-claim-commands:
+    - 'pay {player} 99999'
+    - 'give {player} diamond 100'
+    send-title-message: true
+    title:
+      header: '&bClaimed Reward'
+      footer: '&7You claimed &6Weekly'
+      fade-in: 45
+      stay: 60
+      fade-out: 45
+    gui:
+      display-name: '&eWeekly Reward'
+      slot: 21
+      material: YELLOW_DYE
+      lore-can-claim:
+      - ''
+      - '&7Claim this reward &6once'
+      - '&7every week!'
+      - ''
+      - '&aYou are eligible to claim this reward!'
+      - ''
+      - '&b&lRewards'
+      - '&f- $99999'
+      - '&f- 100x Diamond'
+      - ''
+      - '&c&lCooldown'
+      - '&f1 Week'
+      lore-cant-claim:
+      - ''
+      - '&7Claim this reward &6once'
+      - '&7every week!'
+      - ''
+      - '&cYou not are eligible to claim this reward!'
+      - ''
+      - '&b&lRewards'
+      - '&f- $99999'
+      - '&f- 100x Diamond'
+      - ''
+      - '&c&lTime till next claim:'
+      - '&f{cooldown-format}'
