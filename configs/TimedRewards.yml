@@ -1,0 +1,19 @@
+enabled: true # Enable / Disable Timed Rewards Feature
+
+rewards:
+  timed-rewards1: # Name of reward, Copy this section and past down below changing this name to create another reward.
+    cooldown: 3600 # Cooldown in seconds - Players will recieve this reward after they have been online for this time, Then the timer resets. Only if they have the permission below
+    permission: 'rewardsplus.timed-reward.reward1' # If players have this permission they will recieve the reward. Set to '' to have no permission
+    on-claim-messages:
+    - '&6You have been online for 1 hour!'
+    - '&a&l+$1000&7, &a&l1x Diamond' # These messages will be sent to the player when they recieve the reward. You can add or remove lines here
+    on-claim-commands:
+    - 'pay {player} 1000'
+    - 'give {player} diamond 1' # These commands will be executed from the console when the player recieves the reward. {player} = Players Name
+    send-title-message: true # Set this to (true/false) to tell the server if we are going to be sending the title message below
+    title:
+      header: '&bClaimed Reward' # Title Header message
+      footer: '&7You have been online for &61 hour!' # Title Footer message
+      fade-in: 22 # Fade in time in ticks (20 = 1 second)
+      stay: 55 # Stay time in ticks (20 = 1 second)
+      fade-out: 22 # Fade out time in ticks (20 = 1 second)
