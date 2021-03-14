@@ -1,0 +1,22 @@
+
+cooldown-format: '{hours} hour(s), {minutes} minute(s), {seconds} seconds'
+rewards:
+  hidden1:
+    cooldown: 43200
+    need-permission-to-claim: false
+    permission: ''
+    no-permission-message: '&cYou dont have permission to claim this hidden reward!'
+    cooldown-active-message: '&cYou cant claim this reward right now. You can claim again in: &e{cooldown-format}'
+    on-claim-messages:
+    - '&6You claimed the &7Hidden Reward #1'
+    - '&a&l+$1000&7, &a&l1x Diamond'
+    on-claim-commands:
+    - 'pay {player} 1000'
+    - 'give {player} diamond 1'
+    send-title-message: true
+    title:
+      header: '&bClaimed Reward'
+      footer: '&bYou claimed &6Hidden Reward #1'
+      fade-in: 35
+      stay: 65
+      fade-out: 35
