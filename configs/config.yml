@@ -1,0 +1,10 @@
+debug: false # For developement purposes only. If enabling you'll have a lot of spam in your console
+storage-type: mysql # Player storage type. Can be MYSQL = mysql database. CONFIG or YML for local storage (player-data.yml)
+
+database:
+  address: '127.0.0.1'
+  port: 3306
+  username: root
+  password: ''
+  database-name: DailyRewards
+  table-name: rewards_data
